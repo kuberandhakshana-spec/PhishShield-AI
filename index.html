@@ -8,86 +8,11 @@
     body { font-family: 'Segoe UI', Arial; background: #0a192f; color: #ccd6f6; margin: 0; padding: 0; }
     .container { max-width: 1000px; margin: auto; padding: 30px 20px; }
     header { text-align: center; margin-bottom: 30px; }
-    h1 { color: #64ffda; font-size: 2.5em; }
+    h1 { color: #64ffda; font-size: 2.5em; margin: 10px 0; }
     h2 { color: #64ffda; border-bottom: 2px solid #233554; padding-bottom: 10px; margin-top: 30px; }
     .card { background: #112240; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #64ffda; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
     .feature { background: #233554; padding: 15px; border-radius: 8px; }
-    input { width: 70%; padding: 12px; border-radius: 5px; border: none; background: #233554; color: white; }
-    button { padding: 12px 25px; background: #64ffda; color: #0a192f; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
-    button:hover { background: #52e0c4; }
-    #result { margin-top: 15px; font-size: 18px; font-weight: bold; }
-    .impact { background: #233554; padding: 15px; border-radius: 8px; margin: 10px 0; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>🔒 PhishShield AI</h1>
-      <p><b>Team:</b> HEXATECH | <b>Smart India Hackathon 2026</b></p>
-      <p><b>Problem Statement ID:</b> SIH-1454</p>
-    </header>
-
-    <div class="card">
-      <h2>Proposed Solution</h2>
-      <p>AI/ML-Based Phishing Detection: An intelligent early-warning system that helps users recognize fake/look-alike websites and avoid phishing attacks by analyzing URLs and website characteristics in real-time.</p>
-    </div>
-
-    <h2>Technical Approach</h2>
-    <div class="grid">
-      <div class="feature">1. <b>URL Analysis</b><br>Validate URLs and identify suspicious patterns</div>
-      <div class="feature">2. <b>Feature Extraction</b><br>Extract URL, domain and security-based features</div>
-      <div class="feature">3. <b>ML Classification</b><br>Analyze extracted features using trained ML model</div>
-      <div class="feature">4. <b>Real-Time Detection</b><br>Classify URL as Phishing/Legitimate with confidence score</div>
-    </div>
-
-    <div class="card">
-      <h2>Innovative & Adaptive Security</h2>
-      <p>Combines automated feature analysis and ML-based prediction to provide fast, scalable, and continuously improvable phishing detection. Effective against both known and emerging phishing attacks instead of relying only on traditional blacklists.</p>
-    </div>
-
-    <h2>Impact and Benefits</h2>
-    <div class="impact">✅ <b>Social:</b> Improves cybersecurity awareness and promotes safer internet usage</div>
-    <div class="impact">✅ <b>Economic:</b> Helps individuals and organizations reduce losses caused by phishing attacks</div>
-    <div class="impact">✅ <b>Technical:</b> Provides AI/ML-based, scalable, and adaptive phishing detection</div>
-    <div class="impact">✅ <b>Long-Term:</b> Supports a safer digital environment against evolving cyber threats</div>
-
-    <div class="card">
-      <h2>Check URL Now</h2>
-      <input type="text" id="url" placeholder="Enter suspicious URL here...">
-      <button onclick="checkURL()">Check</button>
-      <p id="result"></p>
-    </div>
-
-    <div class="card">
-      <h2>Feasibility & Challenges</h2>
-      <p><b>Challenges:</b> New/zero-day phishing domains, constantly changing attack patterns, false positives</p>
-      <p><b>Solution:</b> Multi-feature AI analysis, continuously updated phishing datasets, regular model retraining, risk-based classification</p>
-    </div>
-
-    <div class="card">
-      <h2>Conclusion</h2>
-      <p>PhishShield AI provides real-time risk alerts before users interact with suspicious domains, protecting users from credential theft, data breaches, and financial loss. It builds safer digital habits for students, employees, and organizations.</p>
-    </div>
-  </div>
-
-  <script>
-    function checkURL() {
-      let url = document.getElementById("url").value.toLowerCase();
-      let result = document.getElementById("result");
-      
-      if(url == "") {
-        result.innerHTML = "⚠️ Please enter a URL";
-        result.style.color = "#ffa500";
-      }
-      else if(url.includes("login") || url.includes(".tk") || url.includes(".ml") || url.includes("verify") || url.includes("secure")) {
-        result.innerHTML = "⚠️ High Risk - Phishing Detected | Confidence: 92%";
-        result.style.color = "#ff5555";
-      } else {
-        result.innerHTML = "✅ Safe Website | Confidence: 98%";
-        result.style.color = "#64ffda";
-      }
-    }
-  </script>
-</body>
-</html>
+    input { width: 70%; padding: 12px; border-radius: 5px; border: none; background: #233554; color: white; font-size: 16px; }
+    button { padding: 12px 25px; background: #64ffda; color: #0a192f; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 16px; }
+    button:hover

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishShield AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #020617, #172554);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 45px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .tagline {
+            color: #93c5fd;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .scanner {
+            background: rgba(30, 41, 59, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .input-area {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            padding: 16px 25px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 25px;
+            background: #0f172a;
+            border-radius: 15px;
+            text-align: left;
+        }
+
+        .risk-bar {
+            width: 100%;
+            height: 18px;
+            background: #334155;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        #riskFill {
+            height: 100%;
+            width: 0%;
+            transition: 0.5s;
+        }
+
+        .high {
+            background: #ef4444;
+        }
+
+        .medium {
+            background: #f59e0b;
+        }
+
+        .low {
+            background: #22c55e;
+        }
+
+        .status {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .recommendation {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        @media (max-width: 600px) {
+            .input-area {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">🛡️</div>
+
+    <h1>PhishShield AI</h1>
+
+    <div class="tagline">
+        Detect Before You Trust.
+    </div>
+
+    <div class="scanner">
+
+        <p>AI-powered phishing website detection system</p>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="urlInput"
+                placeholder="Enter a website URL"
+            >
+
+            <button onclick="scanWebsite()">
+                🔍 Scan Website
+            </button>
+
+        </div>
+
+        <div id="result">
+
+            <h2>🔐 Website Security Analysis</h2>
+
+            <p>Enter a website URL above to start the analysis.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

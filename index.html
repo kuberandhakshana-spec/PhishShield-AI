@@ -56,7 +56,7 @@
     .hero {
       height: 100vh; display: flex; flex-direction: column;
       justify-content: center; align-items: center; text-align: center;
-      padding: 20px;
+      padding: 20px; padding-top: 100px;
     }
     .shield-icon {
       font-size: 100px; animation: pulse 2s infinite;
@@ -113,6 +113,13 @@
 
     /* FOOTER */
     footer { text-align: center; padding: 30px; border-top: 1px solid rgba(100, 255, 218, 0.2); }
+
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.5em; }
+      input { width: 100%; margin-bottom: 10px; }
+    }
   </style>
 </head>
 <body>
